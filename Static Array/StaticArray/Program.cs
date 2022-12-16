@@ -78,6 +78,17 @@ namespace StaticArray
             this.array = new T[INITIAL_CAPACITY];
             this.count = 0;
         }
+
+        /// <summary>
+        /// Returns the index of the first occurrence of the specified
+        /// element in this list (or -1 if it does not exist).
+        /// </summary>
+        /// <param name="item">The element you are searching</param>
+        /// <returns>
+        /// The index of a given element or -1 if it is not found
+        /// </returns>
+        public int IndexOf(T item)
+        { }
     }
     internal class Program
     {
