@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kacpr\\OneDrive\\Programowanie\\C#\\DSA\\Static Array\\StaticArray\\StaticArray.csproj": {}
+    "C:\\Users\\kacpr\\OneDrive\\Programowanie\\C#\\DSA\\DSA\\DSA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kacpr\\OneDrive\\Programowanie\\C#\\DSA\\Static Array\\StaticArray\\StaticArray.csproj": {
+    "C:\\Users\\kacpr\\OneDrive\\Programowanie\\C#\\DSA\\DSA\\DSA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\C#\\DSA\\Static Array\\StaticArray\\StaticArray.csproj",
-        "projectName": "StaticArray",
-        "projectPath": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\C#\\DSA\\Static Array\\StaticArray\\StaticArray.csproj",
+        "projectUniqueName": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\C#\\DSA\\DSA\\DSA.csproj",
+        "projectName": "DSA",
+        "projectPath": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\C#\\DSA\\DSA\\DSA.csproj",
         "packagesPath": "C:\\Users\\kacpr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\C#\\DSA\\Static Array\\StaticArray\\obj\\",
+        "outputPath": "C:\\Users\\kacpr\\OneDrive\\Programowanie\\C#\\DSA\\DSA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
