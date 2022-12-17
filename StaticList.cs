@@ -139,7 +139,9 @@ namespace StaticList
             T item = this.arr[index];
             Array.Copy(this.arr, index + 1, this.arr, index, this.count - index - 1);
             T? t = default;
+#pragma warning disable CS8601 // Possible null reference assignment.
             this.arr[this.count - 1] = t;
+#pragma warning restore CS8601 // Possible null reference assignment.
             this.count--;
             return item;
         }
