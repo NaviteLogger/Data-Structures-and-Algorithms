@@ -222,8 +222,7 @@ namespace LinkedList
             {
                 if (index >= count || index < 0)
                 {
-                    throw new ArgumentOutOfRangeException(
-                    "Invalid index: " + index);
+                    throw new ArgumentOutOfRangeException("Invalid index: " + index);
                 }
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
                 ListNode currentNode = this.head;
