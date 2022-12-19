@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using StaticList;
 using LinkedList;
+using DoublyLinkedList;
 
 public class Program
 {
@@ -16,6 +17,7 @@ public class Program
 		}*/
 
         LinkedList.DynamicList<int> lista = new DynamicList<int>();
+        DoublyLinkedList.DoublyLinkedList<int> listaDynamiczna = new DoublyLinkedList<int>();
 
         Console.WriteLine("It works!");
     }

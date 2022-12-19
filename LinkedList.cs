@@ -3,7 +3,7 @@
 namespace LinkedList
 {
 
-    /// <summary>Dynamic (linked) list class definition</summary>
+    /// <summary>Linked (linked) list class definition</summary>
     public class DynamicList<T>
     {
         private class ListNode
