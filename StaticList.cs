@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace StaticList
 {
-    public class CustomArrayList<T>
+    public class StaticList<T>
     {
 
         private T[] arr;
@@ -21,7 +21,7 @@ namespace StaticList
         /// <summary>
         /// Initializes the array-based list – allocate memory
         /// </summary>
-        public CustomArrayList(int capacity = INITIAL_CAPACITY)
+        public StaticList(int capacity = INITIAL_CAPACITY)
         {
             this.arr = new T[capacity];
             this.count = 0;

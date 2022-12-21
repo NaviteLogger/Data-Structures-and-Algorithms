@@ -8,7 +8,7 @@ public class Program
 {
 	static void Main()
 	{
-        StaticList.CustomArrayList<int> tablica = new CustomArrayList<int>(10);
+        StaticList.StaticList<int> tablica = new StaticList<int>(10);
 
 /*		for (int j = 0; j < 15; j++)
 		{
@@ -17,7 +17,7 @@ public class Program
 		}*/
 
         LinkedList.DynamicList<int> lista = new DynamicList<int>();
-        DoublyLinkedList.DoublyLinkedList<int> listaDynamiczna = new DoublyLinkedList<int>();
+        DoublyLinkedList.LinkedList<int> listaDynamiczna = new DoublyLinkedList.LinkedList<int>();
 
         Console.WriteLine("It works!");
     }
