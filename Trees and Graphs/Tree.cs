@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DSA.Trees_and_Graphs
+namespace Tree
 {
-    internal class TreeImplementation
+    public class TreeImplementation
     {
         /// <summary>Represents a tree node</summary>
         /// <typeparam name="T">the type of the values in nodes
@@ -53,13 +53,11 @@ namespace DSA.Trees_and_Graphs
             {
                 if (child == null)
                 {
-                    throw new ArgumentNullException(
-                    "Cannot insert null value!");
+                    throw new ArgumentNullException("Cannot insert null value!");
                 }
                 if (child.hasParent)
                 {
-                    throw new ArgumentException(
-                    "The node already has a parent!");
+                    throw new ArgumentException("The node already has a parent!");
                 }
                 child.hasParent = true;
                 this.children.Add(child);
@@ -89,8 +87,7 @@ namespace DSA.Trees_and_Graphs
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException(
-                    "Cannot insert null value!");
+                    throw new ArgumentNullException("Cannot insert null value!");
                 }
                 this.root = new TreeNode<T>(value);
             }
@@ -98,8 +95,7 @@ namespace DSA.Trees_and_Graphs
             /// <param name="value">the value of the root node</param>
             /// <param name="children">the children of the root
             /// node</param>
-            public Tree(T value, params Tree<T>[] children)
-            : this(value)
+            public Tree(T value, params Tree<T>[] children) : this(value)
             {
                 foreach (Tree<T> child in children)
                 {
