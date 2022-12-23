@@ -140,6 +140,75 @@ namespace Tree
             {
                 this.PrintDFS(this.root, string.Empty);
             }
-        }       
+
+            /// <summary>Traverses and prints the tree in
+            /// Breadth-First Search (BFS) manner</summary>
+            public void TraverseBFS()
+            {
+                Queue<TreeNode<T>> queue = new Queue<TreeNode<T>>();
+                queue.Enqueue(this.root);
+                while (queue.Count != 0)
+                {
+                    TreeNode<T> current = queue.Dequeue();
+                    Console.WriteLine(current.Value);
+                    for (int i = 0; i < current.ChildrenCount; i++)
+                    {
+                        queue.Enqueue(current.GetChild(i));
+                    }
+                }
+            }
+
+            /// <summary>Traverses and prints the tree in
+            /// Depth-First Search (DFS) manner</summary>
+            public void TraverseDFSWithStack()
+            {
+                Stack<TreeNode<T>> stack = new Stack<TreeNode<T>>();
+                stack.Push(this.root);
+                while (stack.Count != 0)
+                {
+                    TreeNode<T> current = stack.Pop();
+                    Console.WriteLine(current.Value);
+                    for (int i = 0; i < current.ChildrenCount; i++)
+                    {
+                        stack.Push(current.GetChild(i));
+                    }
+                }
+            }
+
+            /// <summary>Traverses and prints the tree in
+            /// Depth-First Search (DFS) manner</summary>
+
+            private void TraverseDFSWithRecursion(TreeNode<T> root, string spaces)
+            {
+                if (this.root == null)
+                {
+                    return;
+                }
+                Console.WriteLine(spaces + root.Value);
+            }
+
+            private void TraverseDFSWithRecursion(TreeNode<T> root)
+            {
+                if (this.root == null)
+                {
+                    return;
+                }
+                Console.WriteLine(root.Value);
+                for (int i = 0; i < root.ChildrenCount; i++)
+                {
+                    TraverseDFSWithRecursion(root.GetChild(i));
+                }
+            }
+
+            public void TraverseDFSWithRecursion()
+            {
+                TraverseDFSWithRecursion(this.root);
+            }
+
+            public void TraverseDFSWithRecursion(string spaces)
+            {
+                TraverseDFSWithRecursion(this.root, spaces);
+            }
+        }
     }
 }

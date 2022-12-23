@@ -59,7 +59,7 @@ namespace List
             }
             return intersect;
         }
-        
+
         public static void PrintList(List<int> list)
         {
             Console.Write("{ ");

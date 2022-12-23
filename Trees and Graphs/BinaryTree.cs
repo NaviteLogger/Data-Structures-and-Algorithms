@@ -151,7 +151,7 @@ namespace BinaryTree
         /// <typeparam name="T">Specifies the type for the values
         /// in the nodes</typeparam>
 #pragma warning disable CS0693 // Type parameter has the same name as the type parameter from outer type
-        internal class BinaryTreeNode<T> : IComparable<BinaryTreeNode<T>> where T : IComparable<T>
+        public class BinaryTreeNode<T> : IComparable<BinaryTreeNode<T>> where T : IComparable<T>
 #pragma warning restore CS0693 // Type parameter has the same name as the type parameter from outer type
         {
             // Contains the value of the node

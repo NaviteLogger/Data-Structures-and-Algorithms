@@ -12,6 +12,7 @@ public class Program
 {
 	static void Main()
 	{
+
         StaticList.StaticList<int> tablica = new StaticList<int>(10);
 
         for (int j = 0; j < 15; j++)
@@ -117,6 +118,8 @@ public class Program
         stack.Push("2. Nicolas");
         stack.Push("3. Mary");
         stack.Push("4. George");
+        stack.Pop();
+        Console.WriteLine("Stack:" + stack.Peek());
         Console.WriteLine("Top = " + stack.Peek());
         while (stack.Count > 0)
         {
@@ -152,6 +155,22 @@ public class Program
         Console.WriteLine("Are the brackets correct? " +correctBrackets);
 
         //playing with queues
+        PriorityQueue<int,string> priorityQueue = new PriorityQueue<int,string>();
+        priorityQueue.Enqueue(1, "John");
+        priorityQueue.Enqueue(2, "Mary");
+        priorityQueue.Enqueue(3, "George");
+        priorityQueue.Enqueue(4, "Nicolas");
+        priorityQueue.Enqueue(5, "Peter");
+        priorityQueue.Dequeue();
+        Console.WriteLine("Queue:" + priorityQueue.Peek());
+        Console.WriteLine("Top = " + priorityQueue.Peek());
+        while (priorityQueue.Count > 0)
+        {           
+            string personName= priorityQueue.Dequeue().ToString();
+            Console.WriteLine(personName);
+        }
+        
+
         Queue<string> queue = new Queue<string>();
         queue.Enqueue("Message One");
         queue.Enqueue("Message Two");
