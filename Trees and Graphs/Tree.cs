@@ -112,7 +112,8 @@ namespace Tree
                     return this.root;
                 }
             }
-            /// <summary>Traverses and prints tree in /// Depth-First Search (DFS) manner</summary>
+            /// <summary>Traverses and prints tree in 
+            /// Depth-First Search (DFS) manner</summary>
             /// <param name="root">the root of the tree to be
             /// traversed</param>
             /// <param name="spaces">the spaces used for
