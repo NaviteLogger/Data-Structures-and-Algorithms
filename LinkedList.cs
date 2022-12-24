@@ -21,14 +21,14 @@ namespace DoublyLinkedList
         public void AddLast(T element)
 #pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         {
-            base.AddLast(element);
+            _ = base.AddLast(element);
         }
 
 #pragma warning disable CS0108 // Member hides inherited member; missing new keyword
         public void AddFirst(T element)
 #pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         {
-            base.AddFirst(element);
+            _ = base.AddFirst(element);
         }
 
 #pragma warning disable CS0108 // Member hides inherited member; missing new keyword

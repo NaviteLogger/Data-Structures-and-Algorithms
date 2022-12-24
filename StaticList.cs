@@ -153,7 +153,7 @@ namespace StaticList
             int index = IndexOf(item);
             if (index != -1)
             {
-                this.RemoveAt(index);
+                _ = this.RemoveAt(index);
             }
             return index;
         }

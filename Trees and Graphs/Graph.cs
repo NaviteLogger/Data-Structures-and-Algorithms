@@ -48,7 +48,7 @@ namespace Graph
         /// <param name="v">the ending vertex</param>
         public void RemoveEdge(int u, int v)
         {
-            childNodes[u].Remove(v);
+            _ = childNodes[u].Remove(v);
         }
         /// <summary>
         /// Checks whether there is an edge between vertex u and v

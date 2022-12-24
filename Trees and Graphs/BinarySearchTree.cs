@@ -244,7 +244,7 @@ namespace BinarySearchTree
                         }
                         else
                         {
-                            stack.Pop();
+                            _ = stack.Pop();
                             yield return current.Value;
                         }
                     }
@@ -256,13 +256,13 @@ namespace BinarySearchTree
                         }
                         else
                         {
-                            stack.Pop();
+                            _ = stack.Pop();
                             yield return current.Value;
                         }
                     }
                     else if (current.RightChild == previous)
                     {
-                        stack.Pop();
+                        _ = stack.Pop();
                         yield return current.Value;
                     }
                     previous = current;

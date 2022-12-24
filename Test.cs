@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Collections;
+using Microsoft.VisualBasic;
+
 using StaticList;
 using LinkedList;
 using DoublyLinkedList;
 using List;
 using Tree;
 using BinaryTree;
+using Dictionary;
 
 public class Program
 {
@@ -28,10 +31,10 @@ public class Program
 
         //playing with ArrayList 
         ArrayList ArrayList = new ArrayList();
-        ArrayList.Add("Hello");
-        ArrayList.Add(5);
-        ArrayList.Add(3.14159);
-        ArrayList.Add(DateTime.Now);
+        _ = ArrayList.Add("Hello");
+        _ = ArrayList.Add(5);
+        _ = ArrayList.Add(3.14159);
+        _ = ArrayList.Add(DateTime.Now);
         for (int i = 0; i < ArrayList.Count; i++)
         {
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
@@ -41,10 +44,10 @@ public class Program
         }
 
         ArrayList NumerList = new ArrayList();
-        NumerList.Add(2);
-        NumerList.Add(3.5f);
-        NumerList.Add(25u);
-        NumerList.Add(" EUR");
+        _ = NumerList.Add(2);
+        _ = NumerList.Add(3.5f);
+        _ = NumerList.Add(25u);
+        _ = NumerList.Add(" EUR");
         dynamic sum = 0;
         for (int i = 0; i < NumerList.Count; i++)
         {
@@ -118,7 +121,7 @@ public class Program
         stack.Push("2. Nicolas");
         stack.Push("3. Mary");
         stack.Push("4. George");
-        stack.Pop();
+        _ = stack.Pop();
         Console.WriteLine("Stack:" + stack.Peek());
         Console.WriteLine("Top = " + stack.Peek());
         while (stack.Count > 0)
@@ -145,7 +148,7 @@ public class Program
                     correctBrackets = false;
                     break;
                 }
-                BracketsCheckStack.Pop();
+                _ = BracketsCheckStack.Pop();
             }
         }
         if (BracketsCheckStack.Count != 0)
@@ -161,7 +164,21 @@ public class Program
         priorityQueue.Enqueue(3, "George");
         priorityQueue.Enqueue(4, "Nicolas");
         priorityQueue.Enqueue(5, "Peter");
-        priorityQueue.Dequeue();
+        _ = priorityQueue.Dequeue();
+
+        Queue<int> queueReversed = new Queue<int>();
+        queueReversed.Enqueue(1);
+        queueReversed.Enqueue(2);
+        queueReversed.Enqueue(3);
+        queueReversed.Enqueue(4);
+        queueReversed.Enqueue(5);
+        queueReversed.Reverse();
+        Console.WriteLine("Queue reversed:");
+        foreach (var item in queueReversed)
+        {
+            Console.WriteLine(item);
+        }
+
         Console.WriteLine("Queue:" + priorityQueue.Peek());
         Console.WriteLine("Top = " + priorityQueue.Peek());
         while (priorityQueue.Count > 0)
@@ -243,6 +260,22 @@ public class Program
         Console.WriteLine();
         // Console output:
         // 23 19 10 6 21 14 3 15
+
+
+        // Playing with the dictionaries
+        Dictionary.Dictionary<int, string> dictionary = new Dictionary.Dictionary<int, string>();
+
+        dictionary.Add(1, "Marek");
+        dictionary.Add(2, "John");
+        dictionary.Add(3, "Jake");
+
+        Console.WriteLine(dictionary.ContainsKey(1));
+        Console.WriteLine(dictionary.ContainsValue("Chad"));
+        
+        foreach(var element in dictionary)
+        {
+            Console.WriteLine(element);
+        }
     }
 
 }
