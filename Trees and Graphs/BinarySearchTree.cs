@@ -22,11 +22,7 @@ namespace BinarySearchTree
             /// <summary>Constructs a binary tree node</summary>
             /// <param name="value">the value of the node</param>
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
             public BinaryTreeNode(T value)
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
             {
                 if (value == null)
@@ -416,7 +412,7 @@ namespace BinarySearchTree
             }
             else
             {
-                BinaryTreeNode<T> successor = this.GetSuccessor(current);
+                BinaryTreeNode<T> successor = BinarySearchTree<T>.GetSuccessor(current);
                 if (current == this.root)
                 {
                     this.root = successor;
@@ -436,7 +432,7 @@ namespace BinarySearchTree
         /// <summary>Gets the successor of a node</summary>
         /// <param name="node">the node to get the successor of</param>
         /// <returns>the successor of the node</returns>
-        private BinaryTreeNode<T> GetSuccessor(BinaryTreeNode<T> node)
+        private static BinaryTreeNode<T> GetSuccessor(BinaryTreeNode<T> node)
         {
             BinaryTreeNode<T> successorParent = node;
             BinaryTreeNode<T> successor = node;
@@ -488,7 +484,7 @@ namespace BinarySearchTree
         /// <summary>Rotates the tree to the left</summary>
         /// <param name="node">the node to rotate the tree to the left of</param>
         /// <returns>the new root of the tree</returns>
-        private BinaryTreeNode<T> RotateLeft(BinaryTreeNode<T> node)
+        private static BinaryTreeNode<T> RotateLeft(BinaryTreeNode<T> node)
         {
             BinaryTreeNode<T> newRoot = node.RightChild;
             node.RightChild = newRoot.LeftChild;
@@ -499,7 +495,7 @@ namespace BinarySearchTree
         /// <summary>Rotates the tree to the right</summary>
         /// <param name="node">the node to rotate the tree to the right of</param>
         /// <returns>the new root of the tree</returns>
-        private BinaryTreeNode<T> RotateRight(BinaryTreeNode<T> node)
+        private static BinaryTreeNode<T> RotateRight(BinaryTreeNode<T> node)
         {
             BinaryTreeNode<T> newRoot = node.LeftChild;
             node.LeftChild = newRoot.RightChild;
@@ -510,19 +506,19 @@ namespace BinarySearchTree
         /// <summary>Rotates the tree to the left and then to the right</summary>
         /// <param name="node">the node to rotate the tree to the left and then to the right of</param>
         /// <returns>the new root of the tree</returns>
-        private BinaryTreeNode<T> RotateLeftRight(BinaryTreeNode<T> node)
+        private static BinaryTreeNode<T> RotateLeftRight(BinaryTreeNode<T> node)
         {
-            node.LeftChild = this.RotateLeft(node.LeftChild);
-            return this.RotateRight(node);
+            node.LeftChild = BinarySearchTree<T>.RotateLeft(node.LeftChild);
+            return BinarySearchTree<T>.RotateRight(node);
         }
 
         /// <summary>Rotates the tree to the right and then to the left</summary>
         /// <param name="node">the node to rotate the tree to the right and then to the left of</param>
         /// <returns>the new root of the tree</returns>
-        private BinaryTreeNode<T> RotateRightLeft(BinaryTreeNode<T> node)
+        private static BinaryTreeNode<T> RotateRightLeft(BinaryTreeNode<T> node)
         {
-            node.RightChild = this.RotateRight(node.RightChild);
-            return this.RotateLeft(node);
+            node.RightChild = BinarySearchTree<T>.RotateRight(node.RightChild);
+            return BinarySearchTree<T>.RotateLeft(node);
         }
 
         /// <summary>Gets the node with the minimum value</summary>
