@@ -164,7 +164,6 @@ public class Program
         priorityQueue.Enqueue(3, "George");
         priorityQueue.Enqueue(4, "Nicolas");
         priorityQueue.Enqueue(5, "Peter");
-        _ = priorityQueue.Dequeue();
 
         Queue<int> queueReversed = new Queue<int>();
         queueReversed.Enqueue(1);
@@ -277,7 +276,13 @@ public class Program
             Console.WriteLine(element);
         }
 
-        
+        dictionary.Remove(1);
+        Console.WriteLine(dictionary.ContainsKey(1));
+        Console.WriteLine(dictionary.ContainsValue("Marek"));
+
+        dictionary.Clear();
+        Console.WriteLine(dictionary.ContainsKey(2));
+        Console.WriteLine(dictionary.ContainsValue("John"));
     }
 
 }
