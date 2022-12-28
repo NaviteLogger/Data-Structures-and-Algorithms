@@ -44,10 +44,12 @@ namespace HashDictionary
 
                 foreach (var item in list)
                 {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                     if (item.Key.Equals(key))
                     {
                         return item.Value;
                     }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 }
 
                 throw new KeyNotFoundException();
@@ -71,10 +73,12 @@ namespace HashDictionary
 
             foreach (var item in list)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 if (item.Key.Equals(key))
                 {
                     throw new ArgumentException("An element with the same key already exists in the dictionary.");
                 }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
             }
 
             list.Add(new KeyValuePair<TKey, TValue>(key, value));
@@ -97,12 +101,14 @@ namespace HashDictionary
 
             for (int i = 0; i < list.Count; i++)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 if (list[i].Key.Equals(key))
                 {
                     list.RemoveAt(i);
                     Count--;
                     return true;
                 }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
             }
 
             return false;
@@ -124,10 +130,12 @@ namespace HashDictionary
 
             foreach (var item in list)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 if (item.Key.Equals(key))
                 {
                     return true;
                 }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
             }
 
             return false;
@@ -140,7 +148,9 @@ namespace HashDictionary
         /// <returns>The index of the specified key.</returns>
         private int GetIndex(TKey key)
         {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             return Math.Abs(key.GetHashCode()) % _size;
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
         
         
