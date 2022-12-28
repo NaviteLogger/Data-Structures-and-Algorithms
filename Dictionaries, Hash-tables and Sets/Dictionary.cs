@@ -9,7 +9,6 @@ namespace Dictionary
         private const int InitialCapacity = 16;
         private const float LoadFactor = 0.75f;
         private int capacity;
-        private int count;
         private int threshold;
         private LinkedList<KeyValuePair<TKey, TValue>>[] slots;
 

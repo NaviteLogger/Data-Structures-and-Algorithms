@@ -10,6 +10,7 @@ using List;
 using Tree;
 using BinaryTree;
 using Dictionary;
+using BlockSort;
 
 public class Program
 {
@@ -54,7 +55,7 @@ public class Program
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             dynamic value = NumerList[i];
 #pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
-            sum = sum + value;
+            sum += value;
         }
         Console.WriteLine("Sum = " + sum);
 
@@ -283,6 +284,12 @@ public class Program
         dictionary.Clear();
         Console.WriteLine(dictionary.ContainsKey(2));
         Console.WriteLine(dictionary.ContainsValue("John"));
+
+        BlockSort.BlockSortClass arrayToBeSorted = new BlockSort.BlockSortClass(10);
+        arrayToBeSorted.initializeArray();
+        arrayToBeSorted.printArray();
+        arrayToBeSorted.arrBuffer();
+        arrayToBeSorted.printFinal();
     }
 
 }
