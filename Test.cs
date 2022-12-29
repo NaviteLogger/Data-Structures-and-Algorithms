@@ -12,6 +12,7 @@ using BinaryTree;
 using Dictionary;
 using BlockSort;
 using BubbleSort;
+using ConsoleControl;
 
 public class Program
 {
@@ -297,10 +298,10 @@ public class Program
 
         //BubbleSort test
         BubbleSort.BubbleSortClass arrayToBeSorted2 = new BubbleSort.BubbleSortClass(10);
-        arrayToBeSorted2.initializeArray();
-        arrayToBeSorted2.printArray();
-        arrayToBeSorted2.bubbleSort();
-        arrayToBeSorted2.printFinal();
+        arrayToBeSorted2.InitializeArray();
+        arrayToBeSorted2.PrintArray(arrayToBeSorted2.array);
+        arrayToBeSorted2.BubbleSort();
+        arrayToBeSorted2.PrintFinal();
     }
 
 }

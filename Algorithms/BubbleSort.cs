@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ConsoleControl;
 
 namespace BubbleSort
 {
-    public class BubbleSortClass
+    public class BubbleSortClass : IConsoleControlInterface
     {
-        private int[] array;
-        private int arrSize;
+        public int[] array;
+        public int arrSize;
         
         public BubbleSortClass(int size)
         {
@@ -18,7 +15,7 @@ namespace BubbleSort
             arrSize = array.Length;
         }
         
-        public void bubbleSort()
+        public void BubbleSort()
         {
             int temp;
             for (int i = 0; i < array.Length; i++)
@@ -35,7 +32,7 @@ namespace BubbleSort
             }
         }
 
-        public void printFinal()
+        public void PrintFinal()
         {
             Console.WriteLine("Printing The Sorted Array");
             foreach (var item in array)
@@ -44,7 +41,7 @@ namespace BubbleSort
             }
         }
 
-        public void initializeArray()
+        public void InitializeArray()
         {
             Random rn = new Random();
             for (int i = 0; i < array.Length; i++)
@@ -52,14 +49,14 @@ namespace BubbleSort
                 array[i] = rn.Next(0, 40);
             }
         }
-        public void printArray()
+
+        void IConsoleControlInterface.PrintArray(int[] array)
         {
-            Console.WriteLine("Printing Unsorted Array");
+            Console.WriteLine("Printing The Array");
             foreach (var item in array)
             {
                 Console.Write(item + " ");
             }
-            Console.WriteLine();
         }
     }
 }
