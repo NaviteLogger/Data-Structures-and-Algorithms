@@ -11,6 +11,7 @@ using Tree;
 using BinaryTree;
 using Dictionary;
 using BlockSort;
+using BubbleSort;
 
 public class Program
 {
@@ -285,11 +286,21 @@ public class Program
         Console.WriteLine(dictionary.ContainsKey(2));
         Console.WriteLine(dictionary.ContainsValue("John"));
 
+        //BlockSort test
         BlockSort.BlockSortClass arrayToBeSorted = new BlockSort.BlockSortClass(10);
         arrayToBeSorted.initializeArray();
         arrayToBeSorted.printArray();
         arrayToBeSorted.arrBuffer();
         arrayToBeSorted.printFinal();
+
+        Console.WriteLine();
+
+        //BubbleSort test
+        BubbleSort.BubbleSortClass arrayToBeSorted2 = new BubbleSort.BubbleSortClass(10);
+        arrayToBeSorted2.initializeArray();
+        arrayToBeSorted2.printArray();
+        arrayToBeSorted2.bubbleSort();
+        arrayToBeSorted2.printFinal();
     }
 
 }
