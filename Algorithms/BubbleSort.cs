@@ -50,7 +50,7 @@ namespace BubbleSort
             }
         }
 
-        void IConsoleControlInterface.PrintArray(int[] array)
+        public void PrintArray(int[] array)
         {
             Console.WriteLine("Printing The Array");
             foreach (var item in array)

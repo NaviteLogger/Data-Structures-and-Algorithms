@@ -5,9 +5,8 @@ namespace ConsoleControl
 {
     interface IConsoleControlInterface
     {
-        void PrintArray(int[] array)
-        {
-            
-        }
+        void PrintArray(int[] array);
+        void InitializeArray();
+        void PrintFinal();
     }
 }
